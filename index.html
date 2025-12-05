@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwilightSouls - Moon Phase Compatibility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated starfield background -->
+    <div class="starfield" id="starfield"></div>
+    
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">TwilightSouls</h1>
+            <p class="subtitle">Discover the lunar bond between two souls</p>
+        </header>
+
+        <!-- Date Input Section -->
+        <section class="input-section">
+            <div class="person-card" id="card1">
+                <div class="card-glow"></div>
+                <h2 class="card-title">Your Soul</h2>
+                <div class="input-wrapper">
+                    <label for="dob1">Date of Birth</label>
+                    <input type="date" id="dob1" class="date-input" required>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span class="divider-symbol">✧</span>
+            </div>
+
+            <div class="person-card" id="card2">
+                <div class="card-glow"></div>
+                <h2 class="card-title">Their Soul</h2>
+                <div class="input-wrapper">
+                    <label for="dob2">Date of Birth</label>
+                    <input type="date" id="dob2" class="date-input" required>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculate Button -->
+        <button class="reveal-btn" id="revealBtn" onclick="calculateCompatibility()">
+            <span class="btn-text">Reveal Your Moons</span>
+            <span class="btn-glow"></span>
+        </button>
+
+        <!-- Results Section (hidden by default) -->
+        <section class="results-section" id="results">
+            <!-- Moon Display Area -->
+            <div class="moons-display">
+                <!-- Person 1 Moon -->
+                <div class="moon-card">
+                    <div class="moon-container">
+                        <div class="moon-halo"></div>
+                        <svg class="moon-svg" id="moon1" viewBox="0 0 100 100"></svg>
+                    </div>
+                    <p class="phase-name" id="phase1">New Moon</p>
+                    <p class="birth-date" id="birthDate1">January 1, 2000</p>
+                </div>
+
+                <!-- Connection Symbol -->
+                <div class="connection">
+                    <div class="connection-line"></div>
+                    <span class="connection-symbol">❦</span>
+                    <div class="connection-line"></div>
+                </div>
+
+                <!-- Person 2 Moon -->
+                <div class="moon-card">
+                    <div class="moon-container">
+                        <div class="moon-halo"></div>
+                        <svg class="moon-svg" id="moon2" viewBox="0 0 100 100"></svg>
+                    </div>
+                    <p class="phase-name" id="phase2">Full Moon</p>
+                    <p class="birth-date" id="birthDate2">January 1, 2000</p>
+                </div>
+            </div>
+
+            <!-- Compatibility Score -->
+            <div class="compatibility-container">
+                <h3 class="compatibility-title">Lunar Compatibility</h3>
+                
+                <div class="score-circle">
+                    <svg class="score-svg" viewBox="0 0 200 200">
+                        <circle class="score-bg" cx="100" cy="100" r="85"></circle>
+                        <circle class="score-progress" id="scoreProgress" cx="100" cy="100" r="85"></circle>
+                    </svg>
+                    <div class="score-value">
+                        <span class="score-number" id="scoreNumber">0</span>
+                        <span class="score-percent">%</span>
+                    </div>
+                </div>
+
+                <p class="compatibility-message" id="compatibilityMessage">
+                    Your souls dance under the same celestial light...
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>✧ Under the same moon, souls find their way ✧</p>
+        </footer>
+    </div>
+
+    <script src="TwilightSouls.js"></script>
+</body>
+</html>
+
