@@ -30,3 +30,6 @@ Pure love, vanilla JavaScript, and a sprinkle of stardust.
 
 *Two souls, one sky, infinite possibility.*
 
+---
+
+Built with ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
